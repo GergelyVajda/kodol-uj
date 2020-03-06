@@ -21,12 +21,11 @@ public class KodolUj {
         String nyilt;
         System.out.println("Kérem adjon meg egy maximum 255 karakter hosszúságú szöveget!");
         nyilt=sc.nextLine();
-        //SZÓKÖZELTÁVOLÍTÓ
-        nyilt.trim();
-        //NAGYBETŰTELENÍTŐ
-        nyilt.toUpperCase();
+        nyilt=nyilt.toUpperCase();
+        char[] betuk=new char[nyilt.length()];
         System.out.println(nyilt);
-        //MEGINT UGYANAZ A PROBLÉMA, NEM TESZI A DOLGÁT, van szóköz, van kisbetű, ellenben az ékezetes betűk felismerhetetlenné válnak.
+        betuk=nyilt.toCharArray();
+        System.out.println(nyilt);
         /*for (int i = 0; i < 255; i++) {
             if (nyilt.charAt(i)) {
                 
